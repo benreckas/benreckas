@@ -1,29 +1,15 @@
 @import "./assets/fonts/inter.css";
 
-html {
-  font-family: "Inter", sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-  }
-}
-
 :root {
-  /* --primary-blue: #40b4c4; */
-  --transparent-blue: rgba(64, 180, 196, 0.3);
   --black: #000;
   --dark-gray: #222;
-  --light-gray: hsla(0, 0, 80%, 0.5);
   --primary: #eb64b9;
   --transparent: rgba(255, 100, 185, 0.3);
-  /* --transparent: rgb(247, 75, 169); */
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 
 .content {
@@ -141,5 +127,11 @@ a::before {
     transform-origin: left center;
     bottom: auto;
     left: 0;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: "Inter var", sans-serif;
   }
 }
