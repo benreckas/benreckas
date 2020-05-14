@@ -1,0 +1,145 @@
+@import "./assets/fonts/inter.css";
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+:root {
+  /* --primary-blue: #40b4c4; */
+  --transparent-blue: rgba(64, 180, 196, 0.3);
+  --black: #000;
+  --dark-gray: #222;
+  --light-gray: hsla(0, 0, 80%, 0.5);
+  --primary: #eb64b9;
+  --transparent: rgba(255, 100, 185, 0.3);
+  /* --transparent: rgb(247, 75, 169); */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+.content {
+  overflow-x: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container {
+  grid-column: 4 / 7;
+}
+
+.hello {
+  color: var(--transparent);
+  bottom: 0;
+  position: fixed;
+  font-size: 40vw;
+  font-weight: 900;
+  margin: 0;
+  z-index: -1;
+  line-height: 0.8;
+  letter-spacing: -0.8vw;
+  transform: translateY(10%);
+}
+
+h1 {
+  font-size: 69px;
+  font-weight: 900;
+  margin: 0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--dark-gray);
+  position: relative;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--black);
+}
+
+a:hover::before {
+  transform: rotate(-3deg) scaleY(3) translateY(-3px);
+}
+
+a::before {
+  transition: all 0.3s;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  width: 100%;
+  background: var(--primary);
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+
+.container h1 {
+  opacity: 0;
+  animation: fade-opacity 1s ease-in-out 0.3s forwards;
+}
+
+.container p {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out 1.5s forwards;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1280px) {
+  .container {
+    grid-column: 2 / 8;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-column: 2 / 12;
+  }
+
+  .hello {
+    position: fixed;
+    font-size: 35vh;
+    transform: rotate(90deg) translateY(-35%);
+    transform-origin: left center;
+    bottom: auto;
+    left: 0;
+  }
+}
