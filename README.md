@@ -1,7 +1,5 @@
-## [benreckas.dev](https://benreckas.dev)
+# Hi, I'm Ben 😃
 
-Website for experimenting, humble brags, sharing experiences and knowledge. Work in progress, blogs and projects coming next.
+I'm a software engineer at Agrian in Clovis, California. I can usually be found working in Ember.js to create user interfaces for one of the largest agricultural software platforms in the world.
 
-## Build Status
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8b04a9ff-2199-4ee8-bb34-1824c4e5436e/deploy-status)](https://app.netlify.com/sites/benreckas/deploys)
+You can find out a little more about me at [benreckas.dev](https://benreckas.dev) or connect with me on [Twitter](https://www.twitter.com/benreckas) or [LinkedIn](https://www.linkedin.com/in/benreckas).
